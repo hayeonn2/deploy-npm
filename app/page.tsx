@@ -1,6 +1,7 @@
-import Text from "@/app/components/Text.tsx";
-import Title from "@/app/components/Title.tsx";
-import Logo from "@/app/components/Logo.tsx";
+// eslint-disable-next-line import/no-unresolved
+import Text from "./components/Text";
+import Title from "./components/Title";
+import Logo from "./components/Logo";
 
 export default function Home() {
   return (

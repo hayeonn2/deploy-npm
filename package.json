@@ -1,9 +1,11 @@
 {
-  "name": "sfac-designkit-react",
+  "name": "sfac-designkit-hayeonn2",
   "version": "0.1.0",
+  "module": "dist/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:types": "tsc --emitDeclarationOnly",
     "start": "next start",
     "format": "npx prettier . --write --cache",
     "lint": "npx eslint --cache --fix .",
@@ -11,7 +13,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
@@ -30,6 +32,11 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-image": "^3.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-url": "^8.0.1",
     "@storybook/addon-essentials": "^7.0.27",
     "@storybook/addon-interactions": "^7.0.27",
     "@storybook/addon-links": "^7.0.27",
@@ -37,12 +44,14 @@
     "@storybook/nextjs": "^7.0.27",
     "@storybook/react": "^7.0.27",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@svgr/rollup": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^5.0.0",
@@ -52,6 +61,12 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
     "storybook": "^7.0.27"
   },
   "husky": {
@@ -66,9 +81,7 @@
       "git add ."
     ]
   },
-  "description": "",
-  "main": ".prettierrc.js",
-  "keywords": [],
+  "description": "custom library",
   "author": "drk <doctor.k1994@gmail.com>",
   "license": "ISC"
 }
