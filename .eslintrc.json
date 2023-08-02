@@ -48,7 +48,8 @@
     "import/extensions": "off",
     "import/export": "off",
     "react/jsx-boolean-value": "off",
-    "react/jsx-props-no-spreading": "off" // Prop spreading 허용
+    "react/jsx-props-no-spreading": "off", // Prop spreading 허용
+    "import/no-unresolved": "off"
   },
   "settings": {
     "import/resolver": {
