@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:config": "webpack --target=browserslist --entry=./src/main.js --output-path=public",
+    "webpack:config": "webpack --target=browserslist --entry=./src/main.tsx --output-path=public",
     "webpack:dev": "npm run webpack:config -- --mode=development",
     "webpack:prod": "npm run webpack:config -- --mode=production",
     "bundle": "cross-env BROWSERSLIST_CONFIG=config/.browserslistrc webpack -c config/webpack/config.js",
@@ -35,11 +35,40 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@types/node": "^20.4.6",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.1",
+    "react-refresh": "^0.14.0",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "^18.2.0"
   }
 }
