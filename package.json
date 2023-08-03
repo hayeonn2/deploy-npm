@@ -1,34 +1,18 @@
 {
   "name": "react-manual-toolchain",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "React 매뉴얼 툴체인 구성",
-  "main": "index.js",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:config": "webpack --target=browserslist --entry=./src/main.tsx --output-path=public",
-    "webpack:dev": "npm run webpack:config -- --mode=development",
-    "webpack:prod": "npm run webpack:config -- --mode=production",
-    "bundle": "cross-env BROWSERSLIST_CONFIG=config/.browserslistrc webpack -c config/webpack/config.js",
-    "build": "webpack build --progress -c webpack/prod.js",
-    "start": "npm run server -- --open",
-    "dev": "npm run server",
-    "server": "webpack server -c webpack/dev.js"
-  },
-  "keywords": [
-    "react",
-    "webpack",
-    "eslint",
-    "prettier",
-    "babel",
-    "typescript",
-    "jest",
-    "testing-library",
-    "sass",
-    "postcss",
-    "svgr"
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
   ],
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "dev": "pnpm build --watch",
+    "start": "webpack-dev-server --open --config webpack.config.js"
+  },
   "author": {
     "name": "hayeonn2",
     "email": "dwd1205@naver.com"
@@ -67,8 +51,8 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "pnpm": "^8.6.11",
     "react": "^18.2.0",
-    "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0"
   }
 }
